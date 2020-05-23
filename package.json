@@ -8,7 +8,10 @@
     "lint": "eslint --ext .js .",
     "test": "jest"
   },
-  "keywords": ["GitHub", "actions"],
+  "keywords": [
+    "GitHub",
+    "actions"
+  ],
   "author": "Dídac García (https://didaquis.github.io/)",
   "license": "ISC",
   "dependencies": {},
