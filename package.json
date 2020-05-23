@@ -1,0 +1,19 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "GitHub Actions examples",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "lint": "eslint --ext .js .",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Dídac García (https://didaquis.github.io/)",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1"
+  }
+}
