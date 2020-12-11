@@ -1,0 +1,25 @@
+# This workflow will do an automated deployment on Surge.sh
+
+name: Node.js CI - Deploy to Surge.sh
+
+on:
+  push:
+    branches: [ master, main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+
+    # Install Surge 
+    - name: Install Surge
+      run: npm install -g surge
+
+    # Deploy to the defined URL using the token
+    - name: Deploy to surge
+      run: surge . ${{secrets.URL_TO_DEPLOY}} --token ${{secrets.TOKEN}}

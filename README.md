@@ -22,3 +22,21 @@ En tu repositorio, crea un directorio llamado `.github/workflows` y añade ahí 
 
 Fíjate que puedes configurar la rama sobre la que quieras que se ejecute la acción y la versión de Node.js que se va a utilizar (en el ejemplo te dejo la acción funcionando para dos ramas y en dos versiones de Node.js distintas).
 
+------
+
+## Publicar una web estática en Surge.sh con cada push a master
+
+Añade la acción llamada `deploy-static-web-to-surge.yml`. Fíjate que estamos deployando la raíz. Recuerda que debes definir como "secreto" la URL de destino y el token de Surge. 
+
+![secret](assets/secret.png)
+
+Para obtener el token de Surge, lanza estos comandos en el terminal:  
+![token_surge](assets/token_surge.png)
+
+####  Si necesitas primero hacer el build sigue estas instrucciones: 
+
+El procedimiento es el mismo que en el caso anterior, pero utiliza la acción `deploy-to-surge.yml`.  
+
+Fíjate que en la acción lanzamos el comando para crear el build. Fíjate también que al lanzar el comando para publicar la web, estamos indicando el directorio "output" de la build.
+
+------
