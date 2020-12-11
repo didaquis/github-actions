@@ -6,7 +6,7 @@ name: Node.js CI - Update patch version
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
 
 jobs:
   build:
