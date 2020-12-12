@@ -35,8 +35,8 @@ Para obtener el token de Surge, lanza estos comandos en el terminal:
 
 ####  Si necesitas primero hacer el build sigue estas instrucciones: 
 
-El procedimiento es el mismo que en el caso anterior, pero utiliza la acción `deploy-to-surge.yml`.  
+El procedimiento es el mismo que en el caso anterior, pero esta vez utiliza la acción `deploy-to-surge.yml`.  
 
-Fíjate que en la acción lanzamos el comando para crear el build. Fíjate también que al lanzar el comando para publicar la web, estamos indicando el directorio "output" de la build.
+Fíjate que en la acción lanzamos el comando para crear el build (TIP: podrías lanzar cualquier otro comando que haya definido en el package.json). Fíjate también que al lanzar el comando para publicar la web, estamos indicando el directorio "output" de la build.
 
 ------
