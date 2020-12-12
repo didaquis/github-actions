@@ -14,13 +14,13 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2-beta
       with:
-        node-version: '12'
+        node-version: '14'
 
     # Install npm packages
     - name: Install packages
       run: npm install
 
-    # Build react app
+    # Build the app
     - name: Build the app
       run: npm run build
 
