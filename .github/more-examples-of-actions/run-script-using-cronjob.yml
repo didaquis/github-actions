@@ -1,0 +1,26 @@
+name: Run a npm script using a cronjob
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Execute at: 04:35 on Sunday
+    - cron: '35 4 * * SUN'
+
+jobs:
+  getBackup:
+    runs-on: ubuntu-latest
+    env:
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: npm install
+    - run: npm run your_script
+    - run: |
+        git config user.name "Dídac García"
+        git config user.email didaquis@gmail.com 
+        git add .
+        git commit -m "New backup created"
+        git push
