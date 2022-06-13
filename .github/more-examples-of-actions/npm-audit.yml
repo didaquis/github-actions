@@ -1,0 +1,20 @@
+# This workflow will execute a npm audit
+
+name: Node.js CI - npm audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+    - name: Audit for vulnerabilities
+      run: npm audit --production --audit-level=high
